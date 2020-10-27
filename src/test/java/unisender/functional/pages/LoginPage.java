@@ -1,8 +1,8 @@
-package unisender.functional.page;
+package unisender.functional.pages;
 
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
-import unisender.functional.testconfig.Config;
+import unisender.functional.config.Config;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -12,14 +12,14 @@ public class LoginPage {
     }
 
     public void login(String login) {
-        $(By.cssSelector("input[data-test='input-login']")).val(login);
+        $(By.cssSelector("[data-test='input-login']")).val(login);
     }
 
     public void pass(String pass) {
-        $(By.cssSelector("input[data-test='input-password']")).val(pass);
+        $(By.cssSelector("[data-test='input-password']")).val(pass);
     }
 
     public void click() {
-        $(By.cssSelector("button[data-test='btn-login']")).click();
+        $(By.cssSelector("[data-test='btn-login']")).click();
     }
 }
